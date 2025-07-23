@@ -54,10 +54,30 @@ nav a:hover {
   border-radius: 6px;
   text-decoration: none;
 }
-
 footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 1rem;
+}
+.products {
+  padding: 2em;
+  background: #fff;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin: 0.5em 0;
+  font-size: 1.1em;
 }
