@@ -1,8 +1,7 @@
-// Mobile Nav Toggle
-const toggleMenu = () => {
-  const nav = document.querySelector("nav ul");
-  nav.classList.toggle("open");
-};
+// Toggle mobile nav
+document.getElementById('nav-toggle').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('show');
+});
 
 // Dark Mode Toggle
 const toggleDarkMode = () => {
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Toggle dark mode
 document.getElementById('darkModeToggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark');
+  document.body.classList.toggle('dark-mode');
 });
 
   // Load saved dark mode
