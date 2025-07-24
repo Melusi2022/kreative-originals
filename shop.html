@@ -7,30 +7,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <<header class="site-header">
-  <div class="header-container">
-    <img src="images/logo.jpg" alt="Kreative Originals Logo" class="logo">
-    
-    <button id="nav-toggle" class="nav-toggle">☰</button>
+  <!-- HEADER START -->
+  <header class="site-header">
+    <div class="header-container">
+      <img src="images/logo.jpg" alt="Kreative Originals Logo" class="logo">
 
-    <nav class="navigation">
-      <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      <!-- Hamburger toggle for mobile -->
+      <button id="nav-toggle" class="nav-toggle">☰</button>
 
-    <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
-  </div>
-</header>
+      <nav class="navigation">
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Dark mode toggle -->
+      <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+    </div>
+  </header>
+  <!-- HEADER END -->
 
   <main class="shop">
     <h2>Shop Now</h2>
     <div class="products">
-      <!-- Product 1 -->
+
+      <!-- Repeatable Product Card -->
       <div class="product">
         <img src="images/product1.jpg" alt="Jordan 1 Retro">
         <h3>Jordan 1 Retro</h3>
@@ -38,7 +42,6 @@
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Jordan%201%20Retro" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 2 -->
       <div class="product">
         <img src="images/product2.jpg" alt="Kreative Fragrance">
         <h3>Kreative Fragrance</h3>
@@ -46,57 +49,50 @@
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Kreative%20Fragrance" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 3 -->
       <div class="product">
-        <img src="images/product3.jpg" alt="Product 3">
+        <img src="images/product3.jpg" alt="Air Max 97">
         <h3>Air Max 97</h3>
         <p>R1800</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Air%20Max%2097" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 4 -->
       <div class="product">
-        <img src="images/product4.jpg" alt="Product 4">
+        <img src="images/product4.jpg" alt="Yeezy Boost 350">
         <h3>Yeezy Boost 350</h3>
         <p>R3200</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Yeezy%20Boost%20350" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 5 -->
       <div class="product">
-        <img src="images/product5.jpg" alt="Product 5">
+        <img src="images/product5.jpg" alt="Air Force 1">
         <h3>Air Force 1</h3>
         <p>R1600</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Air%20Force%201" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 6 -->
       <div class="product">
-        <img src="images/product6.jpg" alt="Product 6">
+        <img src="images/product6.jpg" alt="Jordan 4 Bred">
         <h3>Jordan 4 Bred</h3>
         <p>R2800</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Jordan%204%20Bred" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 7 -->
       <div class="product">
-        <img src="images/product7.jpg" alt="Product 7">
+        <img src="images/product7.jpg" alt="Dunk Low Panda">
         <h3>Dunk Low Panda</h3>
         <p>R2100</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Dunk%20Low%20Panda" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 8 -->
       <div class="product">
-        <img src="images/product8.jpg" alt="Product 8">
+        <img src="images/product8.jpg" alt="New Balance 550">
         <h3>New Balance 550</h3>
         <p>R2000</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20New%20Balance%20550" class="btn">Order on WhatsApp</a>
       </div>
 
-      <!-- Product 9 -->
       <div class="product">
-        <img src="images/product9.jpg" alt="Product 9">
+        <img src="images/product9.jpg" alt="Vans Old Skool">
         <h3>Vans Old Skool</h3>
         <p>R1300</p>
         <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Vans%20Old%20Skool" class="btn">Order on WhatsApp</a>
@@ -104,10 +100,22 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Kreative Originals. All rights reserved.</p>
   </footer>
 
+  <!-- NAV TOGGLE SCRIPT -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- Optional external JS -->
   <script src="script.js"></script>
 </body>
 </html>
