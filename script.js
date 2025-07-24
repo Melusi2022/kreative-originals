@@ -19,12 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".menu-toggle");
   if (menuBtn) menuBtn.addEventListener("click", toggleMenu);
 
-  // Toggle dark mode
-  const darkBtn = document.querySelector(".dark-mode-toggle");
-  if (darkBtn) darkBtn.addEventListener("click", toggleDarkMode);
+// Toggle dark mode
+document.getElementById('darkModeToggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
 
   // Load saved dark mode
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
   }
+});
+// Toggle mobile menu
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
 });
