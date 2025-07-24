@@ -7,36 +7,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Kreative Originals</div>
-    <button class="menu-toggle">☰</button>
-    <button class="dark-mode-toggle">🌙</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Kreative Originals Logo">
+      <h1>Kreative Originals</h1>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
+    <div class="toggle">
+      <button id="darkModeToggle">🌓</button>
+      <button id="menuToggle">☰</button>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h1>Welcome to Kreative Originals</h1>
-      <p>Your trusted spot for custom apparel and more.</p>
-    </section>
-  </main>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Step into Style</h2>
+      <p>Exclusive Jordan Art & Streetwear. Built Different.</p>
+      <a href="https://wa.me/27766572366?text=Hi%20Kreative%20Originals%2C%20ask%20anything!" class="whatsapp-button" target="_blank">Ask Anything 💬</a>
+    </div>
+  </section>
 
-  <a
-    href="https://wa.me/27766572366?text=Hi%20there!%20I%20have%20a%20question%20about%20Kreative%20Originals."
-    class="whatsapp-chat"
-    target="_blank"
-    rel="noopener"
-    title="Ask anything on WhatsApp"
-  >
-    💬
-  </a>
+  <footer>
+    <p>&copy; 2025 Kreative Originals. All Rights Reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
