@@ -64,36 +64,21 @@ nav a:hover {
 }
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
-
 .product {
-  background-color: var(--card-bg, #f9f9f9);
-  border-radius: 12px;
+  background-color: var(--card-bg);
   padding: 1rem;
+  border-radius: 12px;
   text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-.product:hover {
-  transform: translateY(-5px);
-}
-
 .product img {
-  max-width: 100%;
-  border-radius: 10px;
+  width: 100%;
   height: auto;
-}
-
-.product p {
-  margin-top: 0.8rem;
-  font-weight: 500;
-  color: var(--text-color);
+  border-radius: 8px;
 }
 /* Footer */
 footer {
