@@ -1,6 +1,6 @@
-// Toggle mobile nav
-document.getElementById('nav-toggle').addEventListener('click', () => {
-  document.getElementById('nav-links').classList.toggle('show');
+// Mobile Nav Toggle
+document.querySelector('.mobile-nav-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
 });
 
 // Dark Mode Toggle
