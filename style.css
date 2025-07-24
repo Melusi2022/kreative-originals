@@ -12,15 +12,14 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Header */
+/* Header base */
 .site-header {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+  background-color: #111;
+  color: white;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .header-container {
@@ -28,39 +27,62 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo {
   height: 60px;
-  max-width: 100%;
+  width: auto;
 }
 
-/* Navigation */
-.nav-links {
-  list-style: none;
+/* Nav menu styling */
+.nav-menu ul {
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
+.nav-menu ul li a {
+  color: white;
   text-decoration: none;
-  color: #333;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #555;
-}
-
+/* Hamburger menu for mobile */
 .nav-toggle {
-  font-size: 1.5rem;
+  display: none;
+  font-size: 24px;
   background: none;
   border: none;
-  display: none;
+  color: white;
   cursor: pointer;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .nav-menu ul {
+    flex-direction: column;
+    display: none;
+    background: #111;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-menu.show ul {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
 /* Dark Mode Button */
