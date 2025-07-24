@@ -2,37 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop - Kreative Originals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | Kreative Originals</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+    <img src="images/logo.jpg" alt="Kreative Originals Logo" class="logo">
     <nav>
-      <div class="logo">Kreative Originals</div>
-      <ul class="nav-links">
+      <button id="nav-toggle">☰</button>
+      <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button id="darkModeToggle">🌙</button>
     </nav>
   </header>
 
   <main class="shop">
-    <h2>Our Collection</h2>
-    <div class="product-grid">
+    <h2>Shop Now</h2>
+    <div class="products">
       <div class="product">
-        <img src="images/product3.jpg" alt="Product 3">
-        <h3>Sneaker</h3>
-        <p>R1200</p>
-        <a href="https://wa.me/27766572366" class="btn">Order on WhatsApp</a>
+        <img src="images/product1.jpg" alt="Product 1">
+        <h3>Jordan 1 Retro</h3>
+        <p>R2000</p>
+        <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Jordan%201%20Retro" class="btn">Order on WhatsApp</a>
       </div>
       <div class="product">
-        <img src="images/product4.jpg" alt="Product 4">
-        <h3>Signature Fragrance</h3>
-        <p>R1200</p>
-        <a href="https://wa.me/27766572366" class="btn">Order on WhatsApp</a>
+        <img src="images/product2.jpg" alt="Product 2">
+        <h3>Kreative Fragrance</h3>
+        <p>R950</p>
+        <a href="https://wa.me/27766572366?text=Hi!%20I'm%20interested%20in%20the%20Kreative%20Fragrance" class="btn">Order on WhatsApp</a>
       </div>
     </div>
   </main>
@@ -40,5 +42,7 @@
   <footer>
     <p>&copy; 2025 Kreative Originals. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
