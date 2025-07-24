@@ -1,108 +1,113 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: #fff;
+  padding: 0;
+  background: #f9f9f9;
   color: #111;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 header {
-  background: #000;
-  padding: 1rem 2rem;
-  color: #fff;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
 }
 
-.nav-links {
-  list-style: none;
+.logo {
+  font-size: 1.5rem;
+}
+
+nav ul {
   display: flex;
+  list-style: none;
   gap: 1rem;
 }
 
-.nav-links a {
+nav a {
   color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffd700;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.btn {
-  background: #ffd700;
-  color: #000;
-  padding: 0.75rem 1.5rem;
-  border: none;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
 }
 
-.shop, .about, .contact {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.product {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem;
-  background: #f9f9f9;
-}
-
-.product img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-footer {
-  background: #000;
+/* Mobile Nav Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
   color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* WhatsApp Button */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-chat:hover {
+  background-color: #1ebe57;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #1e1e1e;
+}
+
+body.dark-mode nav ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
 }
