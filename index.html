@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kreative Originals</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="./images/logo.jpg" alt="Kreative Originals Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <img src="images/logo.jpg" alt="Kreative Originals Logo" class="logo">
+      <button id="nav-toggle">☰</button>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="darkModeToggle">🌙</button>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1>Style. Luxury. Originality.</h1>
-      <a href="https://wa.me/27766572366?text=Hi%20Kreative%20Originals%2C%20ask%20anything!" target="_blank">
-        <button class="btn">Order on WhatsApp</button>
-      </a>
-    </div>
-  </section>
+  <main class="hero">
+    <h1>Welcome to Kreative Originals</h1>
+    <p>Where style meets originality. Shop your favourite sneakers now.</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </main>
 
   <footer>
     <p>&copy; 2025 Kreative Originals. All rights reserved.</p>
